@@ -1,0 +1,86 @@
+﻿<DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf=8">
+		<script type="text/javascript" src="css/jquery-3.6.0.min.js"></script>
+		<style>
+		#div1{
+		display:flex;
+		width:300px;
+		height:300px;
+		color:orange;
+		transform:translate(100px,100px);
+		transition:1s;
+		
+		}
+		#eye1{
+		width:50px;
+		height:50px;
+		background-color:white;
+		border-radius:50%;
+}
+		#eye2{
+		width:50px;
+		height:50px;
+		background-color:white;
+		margin-left:40px;
+		border-radius:50%;
+}
+		#btn2{
+		width:100px;
+		height:90px;
+		color:black;
+		transform:translate(-5000px)
+}
+
+
+		</style>
+	</head>
+	<body> 
+	<button id = "btn1" onclick="Click()">Нажать</button>
+	<div id="div1">
+				<div id="eye1" class="eyes">
+				</div>
+				<div id="eye2" class="eyes">
+				</div>
+			
+	</div>
+	<button id = "btn2" onclick="Click2()">Прыгать</button>
+		<script>
+		function Click(){
+		$("#div1").css({
+			"width":"300px",
+			"height":"300px",
+			"background-color":"orange",
+			"transform":"translate(150px,150px)",
+			"transition":"1s",
+		}).animate({"border-radius":"50%"},1000);
+		$(".eyes").css({"background-color":"black"});
+		$("#btn2").css({"transform":"translate(150px,150px)","transition":"1s","margin":"5%"});
+		
+}
+
+function up(){
+	$('#div1').css("transform","translate(150px,50px)");
+	setTimeout(down(),5000);
+}
+function down(){
+	$('#div1').css("transform","translate(150px,150px)")
+}
+
+function Click2(){
+	let i = 0;
+	setTimeout(function jump(){
+		setTimeout(up(),50);
+		i++;
+		if(i === 5)
+			return;
+		setTimeout(jump(),500);
+	},50);
+}
+
+    
+		</script>
+	</body>
+
+</html>
