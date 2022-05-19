@@ -6,14 +6,13 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<title>Каталог</title>
 		<link rel="stylesheet" type="text/css" href="css/catalog.css">
-		<link rel="stylesheet" type="text/css" href="slick/slick.css">
-		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 		 <script type="text/javascript" src="css/jquery-3.6.0.min.js"></script>
          <script type="text/javascript" src="anime.min.js"></script>
-		  <script src="slick/slick.min.js"></script>
-		    <script type="text/javascript" src="slick/slick.js"></script>
 	</head>
 	<body id="top">
+        <div id="msg_form">
+            <p class="p_msg">Спасибо за обращение! <br> Ожидайте ответ на почту! <br><br> С уважением, SEO-PAPA!</p>
+        </div>
 		<div class="header" id="headr">
             <div class="logo_it_papa">
                 <a href="index.html" target="_blank"><img class="image logo"src="image/logo.png" ></a>
@@ -26,16 +25,15 @@
 				</div>
 
                 <ul class="spisok spisok_header">
-                    <li class="label_header label0_spisok_header"><a href="index.html" target="_blank">Личный кабинет</a></li>
-                    <li class="label_header label1_spisok_header"><a href="index.html" target="_blank">Главная</a></li>
-                    <li class="label_header label3_spisok_header"><a href="#" target="_blank">Поддержка</a></li>
+                    <li class="label_header label0_spisok_header"><a href="index.html" target="_blank"><span class="hover_header">Главная</span></a></li>
+                    <li class="label_header label3_spisok_header"><a href="Support.html" target="_blank"><span class="hover_header">Поддержка</span></a></li>
                 </ul>
 			</div>
 		</div>
         <div id="mmenu">
             <ul class="spisok spisok_header_m">
                     <li class="label_header label1_spisok_header" id="li1"><a href="index.html" target="_blank">Главная</a></li>
-                    <li class="label_header label3_spisok_header" id="li3"><a href="#" target="_blank">Поддержка</a></li>
+                    <li class="label_header label3_spisok_header" id="li3"><a href="Support.html" target="_blank">Поддержка</a></li>
                 </ul>
             </div>
         <div class="wrapper">
@@ -47,39 +45,39 @@
             <li>
                 <button class="btn_tool btn_vk">Вконтакте</button>
     			<nav class="btn_tool_block">
-                    <button class="btn_for" onclick="RazdelVKPOpen()">> Подписчики</button>
-        			<button class="btn_for" onclick="RazdelVKLOpen()">> Лайки</button>
-        			<button class="btn_for" onclick="RazdelVKZOpen()">> Просмотры</button>
+                    <button class="btn_for" onclick="Razdel()"> Подписчики</button>
+        			<button class="btn_for" onclick="RazdelLike()"> Лайки</button>
+        			<button class="btn_for" onclick="RazdelEye()"> Просмотры</button>
                 </nav>
             </li>
             <li><button class="btn_tool btn_odn">Одноклассники</button>
                 <nav class="btn_tool_block">
-            <button class="btn_for">> Подписчики</button>
-			<button class="btn_for">> Лайки</button>
-			<button class="btn_for">> Просмотры</button>
+            <button class="btn_for"  onclick="Razdel()"> Подписчики</button>
+			<button class="btn_for"  onclick="RazdelLike()"> Лайки</button>
+			<button class="btn_for"  onclick="RazdelEye()"> Просмотры</button>
         </nav>
     </li>
             <li><button class="btn_tool btn_fb">Facebook</button>
                  <nav class="btn_tool_block">
-             <button class="btn_for">> Подписчики</button>
-            <button class="btn_for">> Лайки</button>
-            <button class="btn_for">> Просмотры</button>
+             <button class="btn_for"  onclick="Razdel()"> Подписчики</button>
+            <button class="btn_for"  onclick="RazdelLike()"> Лайки</button>
+            <button class="btn_for"  onclick="RazdelEye()"> Просмотры</button>
         </nav>
         </li>
             <li><button class="btn_tool btn_inst">Instagram</button>
                  <nav class="btn_tool_block">
-             <button class="btn_for">> Подписчики</button>
-            <button class="btn_for">> Лайки</button>
-            <button class="btn_for">> Просмотры</button>
+             <button class="btn_for"  onclick="Razdel()"> Подписчики</button>
+            <button class="btn_for"  onclick="RazdelLike()"> Лайки</button>
+            <button class="btn_for"  onclick="RazdelEye()"> Просмотры</button>
                     </nav>
         </li>
         </ul>
 
          <ul class="list"> <p class="name_list">Мессенджеры</p>
-            <li><button class="btn_tool btn_tg">Telegram</button>
+            <li><button class="btn_tool btn_tg" >Telegram</button>
                  <nav class="btn_tool_block">
-              <button class="btn_for">> Подписчики</button>
-            <button class="btn_for">> Просмотры</button>
+              <button class="btn_for"  onclick="Razdel()"> Подписчики</button>
+            <button class="btn_for"  onclick="RazdelEye()"> Просмотры</button>
             </nav>
         </li>
             <li><button class="btn_tool btn_wa">WhatsApp</button>
@@ -92,44 +90,41 @@
          <ul class="list"> <p class="name_list">Видеоплощадки</p>
             <li><button class="btn_tool btn_yt">YouTube</button>
                  <nav class="btn_tool_block">
-             <button class="btn_for">> Подписчики</button>
-            <button class="btn_for">> Лайки</button>
-            <button class="btn_for">> Просмотры</button>
+             <button class="btn_for"  onclick="Razdel()"> Подписчики</button>
+            <button class="btn_for" onclick="RazdelLike()" > Лайки</button>
+            <button class="btn_for" onclick="RazdelEye()"> Просмотры</button>
                     </nav>
                 </li>
             <li><button class="btn_tool btn_tw">Twitch</button>
              <nav class="btn_tool_block">
-             <button class="btn_for">> Подписчики</button>
-            <button class="btn_for">> Лайки</button>
-            <button class="btn_for">> Просмотры</button>
+             <button class="btn_for" onclick="Razdel()"> Подписчики</button>
+            <button class="btn_for" onclick="RazdelLike()"> Лайки</button>
+            <button class="btn_for" onclick="RazdelEye()"> Просмотры</button>
                     </nav>
                 </li>
         </ul>
     </div>
-     <div class="main2_catalog">
-        <div class="block_main2 block1_main2">
-         <h2>Вы не можете определиться с заказом?</h2>
-         <p class="p_block1_main2">Если у вас возникли трудности с заказом, то обратитесь в нашу <strong><a href="#" class="purple">Поддержку</a></strong>, или на форму предоставленную ниже: </p>
-         <form>
-            <label>Введите ваше имя:</label>
-            <input placeholder="Имя">
-             <label>Введите вашу почту:</label>
-            <input placeholder="Почта">
-             <label>Введите ваш вопрос:</label>
-            <input placeholder="">
-            <button id="btn_form">Отправить</button>
-         </form>
-        </div>
-            <div class="block_main2 block2_main2">
-                   <img src="image/img1_catalog.png" id="img1">
-            </div>
-
-        </div>
+    
             <!--Здесть находится footer-->
-		<div class="footer">
+		
+    <div class="popup_bg" id="popup">
+    <div class="popup_for_vk_podpiski window_popup">
+		<div class="close_popup"><p id="x_popup_close_element" onclick="PopClose()">X</p></div>
+        <p class="zagolovok_popup" id="p_zg_text"><strong>Подписчики в группу</strong></p>
+        <input placeholder="Ссылка на заказ" id="ssilka_na_zakaz">
+        <p>Введите количество</p>
+        <div class="block_range_and_volume">
+        <input type="range" class="range" min="10" max="100000" value="10" step="1" oninput="outputUpdate(value)">
+        <input for="range" id="volume" type="number">
+        </div>
+        <button onclick = "Summa()" id="stoim">Рассчитать стоимость</button>
+        <p class="oplata"><a href="https://qiwi.com/signin" class="oplata" target="_blank"><u>Перейти к оплате</u></a></p>
+</div>
+        </div>  
+            <div class="footer">
 			<div class="bloki_footer block1_footer">
 				<ul class="ul_block1_footer">
-					<li>© 2022 IT-PAPA.ru</li>
+					<li>© 2022 SEO-PAPA.ru</li>
 					<li><a href="#" target="_blank">Политика конфденциальности</a></li>
 					<li><a href="#" target="_blank">Публичная Оферта</a></li>
 				</ul>
@@ -141,33 +136,22 @@
 				<a href="#" target="_blank"><img class="img_footer" src="image/you.png"></a>
 			</div>
 		</div>
-    <div class="popup_bg" id="popup">
-    <div class="popup_for_vk_podpiski window_popup">
-		<div class="close_popup"><p id="x_popup_close_element" onclick="PopClose()">X</p></div>
-        <p class="zagolovok_popup"><strong>Подписчики в группу</strong></p>
-        <div class="radioandname"> 
-        <input type="radio" class="radioposition"><p class="p_popup">Боты</p> 
-    </div>
-    <div class="radioandname"> 
-        <input type="radio" class="radioposition"> <p class="p_popup">Офферы</p> 
-    </div>
-    <div class="radioandname"> 
-        <input type="radio" class="radioposition"> <p class="p_popup">Живые</p> 
-          </div> 
-        
-        <input placeholder="Ссылка на заказ" id="ssilka_na_zakaz">
-        <p>Введите количество</p>
-        <div class="block_range_and_volume">
-        <input type="range" class="range" min="10" max="100000" value="10" step="1" oninput="outputUpdate(value)">
-        <input for="range" id="volume" type="number">
-        </div>
-        <button onclick = "Summa()" id="stoim">Рассчитать стоимость</button>
-</div>
-        </div>  
        
 			<div id="message"><a href="#top">Вверх</a></div>
+           
                    <script>
-        // Функции для открытия и закрытия раздела Вконтакте
+          // расчет стоимости в модальном окне при клике на кнопку
+                            $('.oplata').css({"visibility":"hidden"});
+                           function Summa(){
+                               var bbtn = document.getElementById("stoim");
+                               var k_oplate = document.getElementsByClassName("oplata");
+                               
+                               var pod = document.querySelector("#volume").value / 5;
+                               bbtn.textContent= pod + " руб.";
+                              $('.oplata').css({"visibility":"visible"}).fadeIn(1000);
+                           }
+                       
+        // Трансляция ползунка
         function outputUpdate(vol){
         var a = document.querySelector("#volume");
         a.value = vol;
@@ -183,64 +167,69 @@
         }
         });
     
+        
+       
+
         // Функции для адаптивного меню под мобильные устройства
     function ClickMenuOpen(){
         var mmenu = document.getElementById("mmenu");
-        var im1 = document.getElementById("im");
-        var im2 = document.getElementById("im2");
-        var im3 = document.getElementById("im3");
+      
         var b1 = document.getElementById("btn_m");
         var b2 = document.getElementById("btn_m2");
         var headr = document.getElementById("headr");
             mmenu.style.display = "block";
-            im.style.display = "none";
-            im2.style.display = "none";
-            im3.style.display = "none";
-            b1.style.display = "none";
-            b2.style.display = "block";
+          
+            b1.style.visibility = "hidden";
+            b2.style.visibility = "visible";
             headr.style.position = "sticky";
+        CloseGo();
         }
-    function ClickMenuClose(){
+                       
+                       
+    function CloseGo(){
         var mmenu = document.getElementById("mmenu");
-        var im1 = document.getElementById("im");
-        var im2 = document.getElementById("im2");
-        var im3 = document.getElementById("im3");
+      
+        var b1 = document.getElementById("btn_m");
+        var b2 = document.getElementById("btn_m2");
+        var headr = document.getElementById("headr");
+            headr.style.zIndex = "50";
+            b2.style.visibility = "visible";
+            b1.style.visibility = "hidden";
+        
+        }
+                         function ClickMenuClose(){
+       var mmenu = document.getElementById("mmenu");
         var b1 = document.getElementById("btn_m");
         var b2 = document.getElementById("btn_m2");
         var headr = document.getElementById("headr");
             mmenu.style.display = "none";
-            im.style.display = "";
-            im2.style.display = "";
-            im3.style.display = "";
-            b1.style.display = "";
-            b2.style.display = "none";
-            headr.style.position = ""
+          
+            b1.style.visibility = "visible";
+            b2.style.visibility = "hidden";
+            headr.style.position = "sticky";
+        
         }
+                       
 		   // Закрытие модального окна по клике на крестик
 		function PopClose(){
 		var vkp = document.getElementById("popup");
 				vkp.style.display = "none";
+            var bbtn = document.getElementById("stoim").textContent="Расчитать стоимость";
+            var volume = document.getElementById("volume").value="0";
+                 $('.oplata').css({"visibility":"hidden"});
+            var ssilka_na_zakaz = document.getElementById("ssilka_na_zakaz").value = "";
 		}
                        
         // Анимация для категорий Социальные сети, Мессенджеры, Видеоплощадки
         var lists = anime({
             targets:'.list',
-            scale:0.1,
+            scale:0,
             direction:'alternate',
             duration:500,
             easing: 'easeOutQuart',
              });
             
-        // Функции для открытия и закрытия раздела Вконтакте
-       /*function VkClickOpen(){
-		   var vk = document.getElementsByClassName("btn_vk");
-		   var btnfvk = document.getElementsByClassName("btn_for_vk");
-		   let i;
-		   for(i = 0;i<3;i++){
-			   btnfvk[i].style.display = "block";
-		   }
-		   vk[0].attributes.onclick.textContent = 'VkClickClose()';
-	   }*/
+     // функции для открытия выпадающих списков
        function VkClickClose(){
 		   var vk = document.getElementsByClassName("btn_vk");
 		   var btnfvk = document.getElementsByClassName("btn_for_vk");
@@ -268,37 +257,37 @@
 
        
                        
-        // Функция для открытия в разделе Вконтаке "Подписчики в группу"
-         function RazdelVKPOpen(){
+        // Функция для открытия в разделе "Подписчики в группу"
+         function Razdel(){
         var vkp = document.getElementById("popup");
+            p_like = document.getElementById("p_zg_text").textContent = "Подписчики в группу";
             vkp.style.display = "flex";
         }
-              function RazdelVKLOpen(){
-        var vkp = document.getElementById("popup");
-        var zag = document.getElementsByClassName("zagolovok_popup");
-            vkp.style.display = "flex";
-        }
+            
                        
-        // Функции для открытия и закрытия раздела Одноклассники      
-       function OdnClickOpen(){
-		   var odn = document.getElementsByClassName("btn_odn");
-		   var btnfodn = document.getElementsByClassName("btn_for_odn");
-		   let i;
-		   for(i = 0;i<3;i++){
-			   btnfodn[i].style.display = "block";
-		   }
-		   odn[0].attributes.onclick.textContent = 'OdnClickClose()';
-	   }
-       function OdnClickClose(){
-		   var odn = document.getElementsByClassName("btn_odn");
-		   var btnfodn = document.getElementsByClassName("btn_for_odn");
-		   let i;
-		   for(i = 0;i<3;i++){
-			   btnfodn[i].style.display = "none";
-		   }
-		   odn[0].attributes.onclick.textContent = 'OdnClickOpen()';
-	   }
+        // Функция для открытия в разделе "Лайки в группу"
+       
+              function RazdelLike(){
+        var vkp = document.getElementById("popup");
+        p_like = document.getElementById("p_zg_text").textContent = "Лайки в группу";
+            vkp.style.display = "flex";
+        }
+                    
+        // Функция для открытия в разделе "Просмотры в группу"
+       
+              function RazdelEye(){
+        var vkp = document.getElementById("popup");
+        p_like = document.getElementById("p_zg_text").textContent = "Просмотры в группу";
+            vkp.style.display = "flex";
+        }
+                    
+                       
+           
 		
+      
+
+
+
 </script>
          	</body>
 </html>

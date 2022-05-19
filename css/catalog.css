@@ -19,6 +19,12 @@ html,body{
     justify-content: center;
     
 }
+.oplata{
+    color:black;
+    font-size: 1em;
+    text-align: center;
+    
+}
 .close_popup{
 	width:100% auto;
 	height:10%;
@@ -32,9 +38,8 @@ html,body{
 	
 }
 #stoim{
-    width:50%;
-    height:20%;
-    margin: auto;
+	margin-top:5%;
+	padding:2%;
     font-size: 1.2em;
     color:black;
     border:2px dashed purple;
@@ -47,6 +52,7 @@ html,body{
     margin-top: 5%;
     margin-bottom: 2%;
 }
+
 .radio{
 	width:4%;
 	float:left;
@@ -218,6 +224,24 @@ p{
 	margin:auto;
 	margin-top:5%;
 }
+.p_msg{
+	font-size: 1em;
+	color:azure;
+}
+#msg_form{
+	position: fixed;
+	z-index: 15;
+	top:0;
+	right:0;
+	width:auto;
+	height:auto;
+	background-color: green;
+	opacity:90%;
+	margin: 2%;
+	border-radius: 2%;
+	padding:2%;
+	display:none;
+}
 .btn_for{
 	background-color:rgb(244,244,244);
 	border:4px solid rgb(244,244,244);
@@ -242,8 +266,11 @@ label{
     text-align:justify;
     padding-right:10%;
 }
+.hover_header:hover{
+	text-decoration:;
+}
 #btn_form{
-	width:30%;
+	width:40%;
 	background-color:  #A358E6;
 	color:black;
     font-size:1.2em;
@@ -290,7 +317,7 @@ input{
 
 
 .main2_catalog{
-	display:flex;
+	display:none;
 	width:90%;
 	height:auto;
 	background-color:rgb(244,244,244);
@@ -349,8 +376,8 @@ input{
 
 .footer{
 	   display: flex; 
-		width:100% auto;
-		height:100% auto;
+		width:100% ;
+		height:auto;
 		background-color:#A358E6;
 		box-shadow:5px 10px 10px 15px rgba(0,0,0,0.50);	
 		border-top: 10px solid #A358E6;
@@ -444,6 +471,7 @@ a{
 }
 #mmenu{
 	display: none;
+	z-index:5;
 }
 .spisok_header_m{
 display:none;
@@ -458,6 +486,10 @@ display:none;
 }
 .block_range_and_volume{
     display: flex;
+}
+#btn_form:hover{
+color:blueviolet;
+cursor:pointer;
 }
 .popup_for_vk_podpiski{
     position: absolute;
@@ -475,7 +507,7 @@ display:none;
     top:50%;
     left:50%;
     width:20%;
-    height:70%;	
+    height:;	
     background-color:white;
     padding: 2%;
     transform:translate(-50%,-50%);
@@ -521,11 +553,15 @@ output{
 	#btn_m{
 	background-color: #A358E6;
 	border: 1px solid #A358E6;
+        position: absolute;
+        cursor:pointer;
+     
 }
 #btn_m2{
 	background-color: #A358E6;
 	border: 1px solid #A358E6;
-	display: none;
+   visibility: hidden;
+     cursor:pointer;
 }
 	#mmenu{
 	width: 100%;
@@ -579,12 +615,7 @@ padding-bottom: 10%;
 
 }
 @media (max-width:900px){
-	.main2_catalog{
-		flex-wrap: wrap;
-	}
-	.block_main2{
-		width:90%;
-	}
+	
      #lists{
     width:100%;
 	display: flex;
@@ -646,6 +677,7 @@ padding-bottom: 10%;
     left:50%;
     width:70%;
     background-color:white;
+	height:auto;
    
     transform:translate(-50%,-50%);
     display: flex;
